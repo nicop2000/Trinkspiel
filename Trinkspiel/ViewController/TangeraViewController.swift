@@ -80,7 +80,7 @@ class TangeraViewController: UIViewController {
     }
     
     @IBAction func NextCardBottom(_ sender: Any) {
-        if (round == 3) {
+        if (round == 31) {
             DescriptionTop?.removeFromSuperview()
             DescriptionBottom?.removeFromSuperview()
             CardView.removeFromSuperview()

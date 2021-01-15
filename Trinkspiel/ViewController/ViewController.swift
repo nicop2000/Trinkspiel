@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     }
     
     
+    
+    
     @IBAction func PlayButton() {
 
         let game = gameDecision.selectedSegmentIndex
@@ -94,25 +96,7 @@ extension ViewController: UITableViewDelegate {
         let vc = storyboard?.instantiateViewController(identifier: "DescriptionViewController") as? DescriptionViewController
         vc?.game = indexPath.row
         self.navigationController?.pushViewController(vc!, animated: true)
-        switch indexPath.row {
-        case 0:
-            print("Tangera")
-            
-            if (explainTangeraWhilePlaying.isOn) {
-                print("on")
-            } else {
-                print("off")
-            }
-
-        case 1:
-            print("Dealer")
-
-        case 2:
-            print("Piccolo")
-
-        default:
-            print("Würfeln")
-        }
+       
 
     }
         

@@ -26,7 +26,7 @@ class PiccoloGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        validatePlayernames()
         setUpViewController()
         print("Start")
         prepareInstructions()
@@ -36,6 +36,30 @@ class PiccoloGameViewController: UIViewController {
 //        print(players)
 //        print(instructions)
 
+        
+    }
+    
+    func validatePlayernames() {
+        var doublePlayerCounter = 1
+        for i in 0...players.count - 1 {
+            print("i \(i)")
+            print(players)
+            if (i <= players.count - 2) {
+                for j in (i + 1)...players.count - 1 {
+                    print("j \(j)")
+                    if(players[i] == players[j]) {
+                        print("found")
+                        print(players)
+                        print(doublePlayerCounter)
+                        doublePlayerCounter += 1
+                        print(doublePlayerCounter)
+                        players[j] = players[j] + "\(doublePlayerCounter)"
+                        print(players)
+                    }
+                }
+            }
+            
+        }
         
     }
     
@@ -54,13 +78,14 @@ class PiccoloGameViewController: UIViewController {
     
 
     func prepareInstructions() {
-        let fileURLPiccolo = Bundle.main.path(forResource: "piccolo", ofType: "txt")
-        var Str = "";
+        var Str = ""
         do {
-        Str = try String(contentsOfFile: fileURLPiccolo!, encoding: String.Encoding.utf8)
+            let fileURLPiccolo = Bundle.main.path(forResource: "piccolo", ofType: "txt")
+            
+            Str = try String(contentsOfFile: fileURLPiccolo ?? "", encoding: String.Encoding.utf8)
 
-        } catch let error as NSError {
-        
+        } catch _ as NSError {
+         Str = ""
         }
         instructions = Str.components(separatedBy: ";")
 //        print(instructions)
@@ -138,13 +163,18 @@ class PiccoloGameViewController: UIViewController {
     }
     
     
+    
     @IBAction func ButtonLabel(_ sender: Any) {
         changeInstruction()
         
     }
     
     @IBAction func ButtonLabelBack(_ sender: Any) {
-        print("OK")
+        changeInstruction()
+        if(countInst >= 1) {
+            countInst += -2
+        }
+        
     }
     
 }

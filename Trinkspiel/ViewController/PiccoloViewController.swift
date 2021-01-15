@@ -16,9 +16,8 @@ class PiccoloViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         overrideUserInterfaceStyle = .dark
-        
-        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
@@ -46,6 +45,7 @@ class PiccoloViewController: UIViewController, UITextFieldDelegate {
    
     }
     
+//MARK: I am sorry! - Lack of better ideas :(
     
  //MARK: Declaration of playername-fields
     @IBOutlet weak var player1Field: UITextField!
@@ -412,7 +412,7 @@ class PiccoloViewController: UIViewController, UITextFieldDelegate {
 //    MARK: get an array of players for use in PiccoloGameViewController
 
     func fillArrayPlayernames() {
-        
+        playernames = []
         if(player1Field.text != "") {
             playernames.append(player1Field.text ?? "")
         }

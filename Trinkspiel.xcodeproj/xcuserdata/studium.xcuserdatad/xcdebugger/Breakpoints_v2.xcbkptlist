@@ -3,4 +3,23 @@
    uuid = "C446B2FF-3B24-44B4-A577-B1E6B4DDE0E0"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "570B98EF-BD5F-44BA-B3BE-6F9F29298820"
+            shouldBeEnabled = "Yes"
+            nameForDebugger = "vpn"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trinkspiel/ViewController/PiccoloGameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "validatePlayernames()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

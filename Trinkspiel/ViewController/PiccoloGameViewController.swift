@@ -4,8 +4,7 @@
  *Dateiname: PiccoloGameViewController.swift
  *Beschreibung:
  *Autor: Petersen, Nico
- 
- *Erstellt: 10.01.21
+ *Erstellt: 10.01.2021
  *
  */
 

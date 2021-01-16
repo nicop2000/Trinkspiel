@@ -3,7 +3,7 @@
  *Dateiname: DealerViewController.swift
  *Beschreibung: Dealer-Spielseite
  *Autor: Petersen, Nico
- *Erstellt: 07.01.21
+ *Erstellt: 07.01.2021
  */
 
 

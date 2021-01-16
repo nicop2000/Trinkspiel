@@ -3,7 +3,7 @@
  *Dateiname: ViewController.swift
  *Beschreibung: Startseite
  *Autor: Petersen, Nico
- *Erstellt: 02.01.21
+ *Erstellt: 02.01.2021
  */
 
 
@@ -36,6 +36,12 @@ class ViewController: UIViewController {
     @IBOutlet var explainTangeraWhilePlaying: UISwitch!
     @IBOutlet weak var gameDecision: UISegmentedControl!
     
+    var games = ["Tangera", "Dealer", "Piccolo"/*, "Würfeln"*/]
+    
+        
+            
+    
+    
     func openURL(urlStr: String!) {
         if let url = URL(string:urlStr), !url.absoluteString.isEmpty {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -44,6 +50,7 @@ class ViewController: UIViewController {
     
     @IBAction func TrinkgeldButton(_ sender: Any) {
         feedback()
+        
     }
     
     
@@ -82,7 +89,7 @@ class ViewController: UIViewController {
     }
     
     
-    var games = ["Tangera", "Dealer", "Piccolo"/*, "Würfeln"*/]
+    
     
     
     override func viewDidLoad() {
@@ -91,6 +98,8 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
+        
+        
             
         
         gameDecision.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
@@ -99,6 +108,13 @@ class ViewController: UIViewController {
         DescriptionTableView.separatorStyle = .singleLine
         DescriptionTableView.showsVerticalScrollIndicator = true
         
+        gameDecision.removeAllSegments()
+        var segmentCount = 0
+        while (gameDecision.numberOfSegments != games.count) {
+            gameDecision.insertSegment(withTitle: games[segmentCount], at: segmentCount, animated: true)
+            segmentCount += 1
+    
+    }
         
         
 //startButtonFrontPage.layer.cornerRadius = 50

@@ -3,7 +3,7 @@
  *Dateiname: DescriptionViewController.swift
  *Beschreibung: Zeigt Beschreibungen für Spiele
  *Autor: Petersen, Nico
- *Erstellt: 06.01.21
+ *Erstellt: 06.01.2021
  */
 
 

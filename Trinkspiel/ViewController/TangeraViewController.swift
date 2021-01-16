@@ -3,7 +3,7 @@
  *Dateiname: TangeraViewController.swift
  *Beschreibung: Tangera-Spielseite
  *Autor: Petersen, Nico
- *Erstellt: 07.01.21
+ *Erstellt: 07.01.2021
  */
 
 

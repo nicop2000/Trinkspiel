@@ -79,6 +79,7 @@ class PiccoloGameViewController: UIViewController {
 
     func prepareInstructions() {
         var Str = ""
+        // Catching exceptions is for communists
         do {
             let fileURLPiccolo = Bundle.main.path(forResource: "piccolo", ofType: "txt")
             
@@ -87,6 +88,7 @@ class PiccoloGameViewController: UIViewController {
         } catch _ as NSError {
          Str = ""
         }
+        
         instructions = Str.components(separatedBy: ";")
 //        print(instructions)
         instructions.shuffle()

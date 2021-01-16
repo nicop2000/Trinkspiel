@@ -34,7 +34,6 @@
                                             <segment title="Tangera"/>
                                             <segment title="Dealer"/>
                                             <segment title="Piccolo"/>
-                                            <segment title="Würfeln"/>
                                         </segments>
                                         <color key="selectedSegmentTintColor" red="0.024143468783996758" green="1" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                     </segmentedControl>

@@ -7,7 +7,26 @@
  */
 
 
+//This code sucks, you know it and I know it.
+//Move on and call me an idiot later.
 
+
+/* safety pig will guard you while reading the code
+     _._ _..._ .-',     _.._(`))
+    '-. `     '  /-._.-'    ',/
+       )         \            '.
+      / _    _    |             \
+     |  a    a    /              |
+     \   .-.                     ;
+      '-('' ).-'       ,'       ;
+         '-;           |      .'
+            \           \    /
+            | 7  .__  _.-\   \
+            | |  |  ``/  /`  /
+           /,_|  |   /,_/   /
+              /,_/      '`-'
+
+ */
 import UIKit
 
 class ViewController: UIViewController {
@@ -33,7 +52,7 @@ class ViewController: UIViewController {
     @IBAction func PlayButton() {
 
         let game = gameDecision.selectedSegmentIndex
-
+        //Magic. Do not touch.
         switch game {
         case 0:
             let vc = storyboard?.instantiateViewController(identifier: "TangeraViewController") as! TangeraViewController
@@ -63,7 +82,7 @@ class ViewController: UIViewController {
     }
     
     
-    var games = ["Tangera", "Dealer", "Piccolo", "Würfeln"]
+    var games = ["Tangera", "Dealer", "Piccolo"/*, "Würfeln"*/]
     
     
     override func viewDidLoad() {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sjY-2i-BsS">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,23 +13,23 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Trinkspiel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pipetap-1163064" translatesAutoresizingMaskIntoConstraints="NO" id="2QB-x3-QHh">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="48h-po-4To" userLabel="HSV.Spielwahl">
-                                <rect key="frame" x="20" y="239.66666666666663" width="388" height="72"/>
+                                <rect key="frame" x="20" y="239.66666666666663" width="374" height="93"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welches Spiel soll gespielt werden?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="U4B-Rj-xwg">
-                                        <rect key="frame" x="0.0" y="0.0" width="388" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZvY-ui-fMr" userLabel="chooseGame">
-                                        <rect key="frame" x="0.0" y="41.000000000000028" width="388" height="32"/>
+                                        <rect key="frame" x="0.0" y="62.000000000000028" width="374" height="32"/>
                                         <segments>
                                             <segment title="Tangera"/>
                                             <segment title="Dealer"/>
@@ -40,13 +40,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Willkommen zur Trinkspiele-App" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="i3K-eD-dPu">
-                                <rect key="frame" x="20" y="108" width="388" height="81.666666666666686"/>
+                                <rect key="frame" x="20" y="108" width="374" height="81.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="31"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AIz-QB-X7O">
-                                <rect key="frame" x="20" y="681" width="388" height="120"/>
+                                <rect key="frame" x="20" y="651" width="374" height="120"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -56,10 +56,10 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="description" id="T49-0n-g4P" userLabel="descriptionCell" customClass="GamesDescription" customModule="Trinkspiel" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="388" height="53"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T49-0n-g4P" id="VS2-A6-CgD">
-                                            <rect key="frame" x="0.0" y="0.0" width="388" height="53"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9b-qn-FkO">
@@ -98,22 +98,22 @@
                                 </variation>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eqG-vD-GKt" userLabel="VSV Erklärung Tangera">
-                                <rect key="frame" x="20" y="821" width="388" height="31"/>
+                                <rect key="frame" x="20" y="791" width="374" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Kartenerklärung bei Tangera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sbm-qN-sDR">
-                                        <rect key="frame" x="0.0" y="0.0" width="319" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="31"/>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q90-PP-xUC">
-                                        <rect key="frame" x="339" y="0.0" width="51" height="31"/>
+                                        <rect key="frame" x="325" y="0.0" width="51" height="31"/>
                                         <color key="onTintColor" red="0.43978971239999998" green="0.053212456409999997" blue="0.46863192320000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </switch>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6e1-tI-Ewc" userLabel="Headline Description">
-                                <rect key="frame" x="20" y="635.66666666666663" width="388" height="29"/>
+                                <rect key="frame" x="20" y="605.66666666666663" width="374" height="29"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Erklärungen zu den Spielen:">
                                         <attributes>
@@ -127,7 +127,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W18-no-wat" userLabel="Start game">
-                                <rect key="frame" x="145" y="341.66666666666669" width="138" height="23"/>
+                                <rect key="frame" x="138" y="362.66666666666669" width="138" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="   Spiel starten" image="play.fill" catalog="system">
@@ -144,7 +144,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eWR-59-1L9">
-                                <rect key="frame" x="186.66666666666666" y="374.66666666666669" width="55" height="55"/>
+                                <rect key="frame" x="179.66666666666666" y="395.66666666666669" width="55" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="ST8-Dn-rUv"/>
                                     <constraint firstAttribute="width" constant="55" id="uVH-yF-ZIS"/>
@@ -162,6 +162,7 @@
                             <constraint firstItem="W18-no-wat" firstAttribute="top" secondItem="48h-po-4To" secondAttribute="bottom" constant="30" id="22S-gm-kzw"/>
                             <constraint firstItem="W18-no-wat" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="300" id="3g4-Ul-GPh">
                                 <variation key="widthClass=regular" constant="340"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="320"/>
                             </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2QB-x3-QHh" secondAttribute="trailing" id="4Vl-SP-85W"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eqG-vD-GKt" secondAttribute="bottom" constant="10" id="AtP-An-cx0"/>
@@ -169,6 +170,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="48h-po-4To" secondAttribute="trailing" constant="20" id="K8m-wp-dvl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W18-no-wat" secondAttribute="trailing" constant="300" id="N41-e4-hPG">
                                 <variation key="widthClass=regular" constant="340"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="320"/>
                             </constraint>
                             <constraint firstItem="eqG-vD-GKt" firstAttribute="top" secondItem="AIz-QB-X7O" secondAttribute="bottom" constant="20" id="NUJ-dr-7vd"/>
                             <constraint firstItem="eqG-vD-GKt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OjD-YV-JYN"/>
@@ -250,20 +252,20 @@
             <objects>
                 <viewController storyboardIdentifier="TangeraViewController" id="LjX-bX-r9L" customClass="TangeraViewController" customModule="Trinkspiel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kji-hA-99x">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital-1661823" translatesAutoresizingMaskIntoConstraints="NO" id="GV5-WP-VZO">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Die Runde ist vorbei! Bitte kehre zum Startbildschirm zurück!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybc-8m-Xan">
-                                <rect key="frame" x="20" y="405.66666666666669" width="388" height="114.66666666666669"/>
+                                <rect key="frame" x="20" y="390.66666666666669" width="374" height="114.66666666666669"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2-2" translatesAutoresizingMaskIntoConstraints="NO" id="KlK-Q1-xxe">
-                                <rect key="frame" x="40" y="338" width="348" height="250"/>
+                                <rect key="frame" x="40" y="323" width="334" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="tjc-04-Xfs"/>
                                 </constraints>
@@ -274,7 +276,7 @@
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARE-TF-fyx">
-                                <rect key="frame" x="20" y="287" width="388" height="41"/>
+                                <rect key="frame" x="20" y="272" width="374" height="41"/>
                                 <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="19"/>
                                 <state key="normal" title="Nächste Karte">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
@@ -284,7 +286,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3g-3w-ixP">
-                                <rect key="frame" x="20" y="598" width="388" height="41"/>
+                                <rect key="frame" x="20" y="583" width="374" height="41"/>
                                 <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="19"/>
                                 <state key="normal" title="Nächste Karte">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
@@ -294,13 +296,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Beschreibung" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNS-77-fqp">
-                                <rect key="frame" x="20" y="263.66666666666669" width="388" height="23.333333333333314"/>
+                                <rect key="frame" x="20" y="248.66666666666666" width="374" height="23.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beschreibung" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kor-Ul-LlB">
-                                <rect key="frame" x="20" y="639" width="388" height="23.333333333333371"/>
+                                <rect key="frame" x="20" y="624" width="374" height="23.333333333333371"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -457,17 +459,17 @@
             <objects>
                 <viewController storyboardIdentifier="DealerViewController" id="uA6-KK-ysG" customClass="DealerViewController" customModule="Trinkspiel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="92Y-NW-nau">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="square-2673252" translatesAutoresizingMaskIntoConstraints="NO" id="78d-bC-Awb">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1-10" translatesAutoresizingMaskIntoConstraints="NO" id="QfS-X9-HRk">
-                                <rect key="frame" x="66" y="255" width="296" height="416"/>
+                                <rect key="frame" x="59" y="240" width="296" height="416"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBD-6o-8vP">
-                                <rect key="frame" x="149" y="752" width="130" height="130"/>
+                                <rect key="frame" x="142" y="722" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="130" id="Lke-7G-snT"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="130" id="ckE-tO-hEu"/>
@@ -480,19 +482,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gewinne in Folge für den Dealer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RR1-yh-l5F">
-                                <rect key="frame" x="92.333333333333329" y="129.66666666666666" width="243.66666666666669" height="20"/>
+                                <rect key="frame" x="85" y="114.66666666666669" width="244" height="20.000000000000014"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rz-Yc-5Hw">
-                                <rect key="frame" x="207.66666666666666" y="169.66666666666666" width="12.666666666666657" height="24.333333333333343"/>
+                                <rect key="frame" x="200.66666666666666" y="154.66666666666666" width="13" height="24.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exn-EI-eBc">
-                                <rect key="frame" x="142.66666666666666" y="164" width="40" height="40"/>
+                                <rect key="frame" x="135.66666666666666" y="149" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="VJw-H5-rj2"/>
                                     <constraint firstAttribute="height" constant="40" id="s2B-b9-vgI"/>
@@ -503,13 +505,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Der Nächste ist dran" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a76-4E-xJN">
-                                <rect key="frame" x="131" y="224" width="166" height="21"/>
+                                <rect key="frame" x="124" y="209" width="166" height="21"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CC-tW-zCX">
-                                <rect key="frame" x="245.33333333333337" y="164" width="40" height="40"/>
+                                <rect key="frame" x="238.66666666666663" y="149" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="ZY4-Tl-d32"/>
                                     <constraint firstAttribute="height" constant="40" id="dJQ-2Q-53U"/>
@@ -689,20 +691,20 @@
             <objects>
                 <viewController storyboardIdentifier="DescriptionViewController" id="OTc-qL-wRd" customClass="DescriptionViewController" customModule="Trinkspiel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aqg-Ja-ZwP">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-2579715" translatesAutoresizingMaskIntoConstraints="NO" id="h5a-u7-7T0">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r53-zw-3mf">
-                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYZ-Jh-s6A">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="848"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjN-YY-GCe" userLabel="Headline">
-                                                <rect key="frame" x="159.66666666666666" y="23" width="108.99999999999997" height="52"/>
+                                                <rect key="frame" x="152.66666666666666" y="23" width="108.99999999999997" height="52"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -718,7 +720,7 @@
                                                 <size key="shadowOffset" width="4" height="-1"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTH-AP-GRe">
-                                                <rect key="frame" x="25" y="95" width="378" height="25.666666666666671"/>
+                                                <rect key="frame" x="25" y="95" width="364" height="25.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -776,14 +778,14 @@
             <objects>
                 <viewController storyboardIdentifier="PiccoloViewController" id="gP3-b8-Uqx" customClass="PiccoloViewController" customModule="Trinkspiel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Em3-ZH-Zf9">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abstract-1963820" translatesAutoresizingMaskIntoConstraints="NO" id="eBd-JR-L5P">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitte Spielernamen eingeben:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ogt-fT-pW4">
-                                <rect key="frame" x="27.333333333333343" y="74" width="373.66666666666663" height="34.666666666666657"/>
+                                <rect key="frame" x="20.333333333333343" y="74" width="373.66666666666663" height="34.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -791,7 +793,7 @@
                                 <size key="shadowOffset" width="0.0" height="-2"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sw0-Zz-X7a">
-                                <rect key="frame" x="41.666666666666657" y="128.66666666666666" width="85" height="34"/>
+                                <rect key="frame" x="34.666666666666657" y="128.66666666666666" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="lMr-4m-jrI"/>
                                 </constraints>
@@ -802,7 +804,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ET1-QE-tbm">
-                                <rect key="frame" x="171.66666666666666" y="128.66666666666666" width="84.999999999999972" height="34"/>
+                                <rect key="frame" x="164.66666666666666" y="128.66666666666666" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="xBm-Dv-zHb"/>
                                 </constraints>
@@ -813,7 +815,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GjF-Mz-0rd">
-                                <rect key="frame" x="301.66666666666669" y="128.66666666666666" width="85" height="34"/>
+                                <rect key="frame" x="294.66666666666669" y="128.66666666666666" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="KqY-Ib-PJ0"/>
                                 </constraints>
@@ -824,7 +826,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xWS-pw-f5T">
-                                <rect key="frame" x="41.666666666666657" y="182.66666666666666" width="85" height="34"/>
+                                <rect key="frame" x="34.666666666666629" y="182.66666666666666" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="H63-NR-CZy"/>
                                 </constraints>
@@ -835,7 +837,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="laz-96-HK8">
-                                <rect key="frame" x="171.66666666666666" y="182.66666666666666" width="84.999999999999972" height="34"/>
+                                <rect key="frame" x="164.66666666666663" y="182.66666666666666" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="uNF-Zb-CH1"/>
                                 </constraints>
@@ -846,7 +848,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 6" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="98q-A1-39g">
-                                <rect key="frame" x="301.66666666666669" y="182.66666666666666" width="85" height="34"/>
+                                <rect key="frame" x="294.66666666666669" y="182.66666666666666" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="C9k-6L-VMp"/>
                                 </constraints>
@@ -857,7 +859,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 7" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N6v-L1-a5t">
-                                <rect key="frame" x="41.666666666666657" y="236.66666666666666" width="85" height="33.999999999999972"/>
+                                <rect key="frame" x="34.666666666666657" y="236.66666666666666" width="85" height="33.999999999999972"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="x3d-Kx-Qge"/>
                                 </constraints>
@@ -868,7 +870,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 8" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sut-DO-c1p">
-                                <rect key="frame" x="171.66666666666666" y="236.66666666666666" width="84.999999999999972" height="33.999999999999972"/>
+                                <rect key="frame" x="164.66666666666666" y="236.66666666666666" width="85" height="33.999999999999972"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="a1Y-fb-Mwn"/>
                                 </constraints>
@@ -879,7 +881,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 9" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TSP-Hn-Qsd">
-                                <rect key="frame" x="301.66666666666669" y="236.66666666666666" width="85" height="33.999999999999972"/>
+                                <rect key="frame" x="294.66666666666669" y="236.66666666666666" width="85" height="33.999999999999972"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="2pA-0O-mCa"/>
                                 </constraints>
@@ -890,7 +892,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x8w-6u-0al">
-                                <rect key="frame" x="41.666666666666657" y="290.66666666666669" width="85" height="34"/>
+                                <rect key="frame" x="34.666666666666629" y="290.66666666666669" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="47u-Rk-lfZ"/>
                                 </constraints>
@@ -901,7 +903,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 11" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u0Q-a9-4lM">
-                                <rect key="frame" x="171.66666666666666" y="290.66666666666669" width="84.999999999999972" height="34"/>
+                                <rect key="frame" x="164.66666666666663" y="290.66666666666669" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="Bcl-IG-XE1"/>
                                 </constraints>
@@ -912,7 +914,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 12" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LdJ-Ta-3Ob">
-                                <rect key="frame" x="301.66666666666669" y="290.66666666666669" width="85" height="34"/>
+                                <rect key="frame" x="294.66666666666669" y="290.66666666666669" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="Qfa-aP-dRQ"/>
                                 </constraints>
@@ -923,7 +925,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 13" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZO-eA-A9o">
-                                <rect key="frame" x="41.666666666666657" y="344.66666666666669" width="85" height="34"/>
+                                <rect key="frame" x="34.666666666666657" y="344.66666666666669" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="bK0-nk-388"/>
                                 </constraints>
@@ -934,7 +936,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 14" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ti1-8W-jos">
-                                <rect key="frame" x="171.66666666666666" y="344.66666666666669" width="84.999999999999972" height="34"/>
+                                <rect key="frame" x="164.66666666666666" y="344.66666666666669" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="zBs-nf-uvy"/>
                                 </constraints>
@@ -945,7 +947,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 15" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6m-VX-Fsi">
-                                <rect key="frame" x="301.66666666666669" y="344.66666666666669" width="85" height="34"/>
+                                <rect key="frame" x="294.66666666666669" y="344.66666666666669" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="tQ7-Fy-OmS"/>
                                 </constraints>
@@ -956,7 +958,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 19" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o5Q-2P-92E">
-                                <rect key="frame" x="41.666666666666657" y="452.66666666666669" width="85" height="34"/>
+                                <rect key="frame" x="34.666666666666657" y="452.66666666666669" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="1lo-6V-hQ9"/>
                                 </constraints>
@@ -967,7 +969,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 20" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3XR-C8-rCD">
-                                <rect key="frame" x="171.66666666666666" y="452.66666666666669" width="84.999999999999972" height="34"/>
+                                <rect key="frame" x="164.66666666666666" y="452.66666666666669" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="DHE-DG-9zk"/>
                                 </constraints>
@@ -978,7 +980,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 21" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iow-Oq-Jza">
-                                <rect key="frame" x="301.66666666666669" y="452.66666666666669" width="85" height="34"/>
+                                <rect key="frame" x="294.66666666666669" y="452.66666666666669" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="6NM-mX-IbJ"/>
                                 </constraints>
@@ -989,7 +991,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 22" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M5o-gP-Drk">
-                                <rect key="frame" x="41.666666666666657" y="506.66666666666674" width="85" height="34"/>
+                                <rect key="frame" x="34.666666666666629" y="506.66666666666674" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="2BZ-j2-5Y5"/>
                                 </constraints>
@@ -1000,7 +1002,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 23" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9N-6w-LZM">
-                                <rect key="frame" x="171.66666666666666" y="506.66666666666674" width="84.999999999999972" height="34"/>
+                                <rect key="frame" x="164.66666666666663" y="506.66666666666674" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="t3Q-e1-rKH"/>
                                 </constraints>
@@ -1011,7 +1013,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 24" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yG2-hD-RKn">
-                                <rect key="frame" x="301.66666666666669" y="506.66666666666674" width="85" height="34"/>
+                                <rect key="frame" x="294.66666666666669" y="506.66666666666674" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="PsZ-mp-ei7"/>
                                 </constraints>
@@ -1022,7 +1024,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 25" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nlm-Eb-Etn">
-                                <rect key="frame" x="41.666666666666657" y="560.66666666666663" width="85" height="34"/>
+                                <rect key="frame" x="34.666666666666657" y="560.66666666666663" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="42N-yG-UPZ"/>
                                 </constraints>
@@ -1033,7 +1035,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 26" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEZ-ab-7cu">
-                                <rect key="frame" x="171.66666666666666" y="560.66666666666663" width="84.999999999999972" height="34"/>
+                                <rect key="frame" x="164.66666666666666" y="560.66666666666663" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="vJX-fC-Jm8"/>
                                 </constraints>
@@ -1044,7 +1046,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 27" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4C-Hu-HED">
-                                <rect key="frame" x="301.66666666666669" y="560.66666666666663" width="85" height="34"/>
+                                <rect key="frame" x="294.66666666666669" y="560.66666666666663" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="mB7-qm-NwW"/>
                                 </constraints>
@@ -1055,7 +1057,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 28" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOc-mx-1DS">
-                                <rect key="frame" x="41.666666666666657" y="614.66666666666663" width="85" height="34"/>
+                                <rect key="frame" x="34.666666666666629" y="614.66666666666663" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="yUM-Le-j9H"/>
                                 </constraints>
@@ -1066,7 +1068,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 29" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQV-4V-Oaj">
-                                <rect key="frame" x="171.66666666666666" y="614.66666666666663" width="84.999999999999972" height="34"/>
+                                <rect key="frame" x="164.66666666666663" y="614.66666666666663" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="vee-Ns-aRU"/>
                                 </constraints>
@@ -1077,7 +1079,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 30" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pnc-sc-II3">
-                                <rect key="frame" x="301.66666666666669" y="614.66666666666663" width="85" height="34"/>
+                                <rect key="frame" x="294.66666666666669" y="614.66666666666663" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="Xp4-DI-u0q"/>
                                 </constraints>
@@ -1085,7 +1087,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 16" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h1d-JN-g5S">
-                                <rect key="frame" x="41.666666666666657" y="398.66666666666669" width="85" height="34"/>
+                                <rect key="frame" x="34.666666666666629" y="398.66666666666669" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="ZpI-iW-EfS"/>
                                 </constraints>
@@ -1096,7 +1098,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 17" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xaf-Ly-tZk">
-                                <rect key="frame" x="171.66666666666666" y="398.66666666666669" width="84.999999999999972" height="34"/>
+                                <rect key="frame" x="164.66666666666663" y="398.66666666666669" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="Iqa-R5-fy8"/>
                                 </constraints>
@@ -1107,7 +1109,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 18" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddF-3R-oMI">
-                                <rect key="frame" x="301.66666666666669" y="398.66666666666669" width="85" height="34"/>
+                                <rect key="frame" x="294.66666666666669" y="398.66666666666669" width="85" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="B9S-Br-QMa"/>
                                 </constraints>
@@ -1118,7 +1120,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebd-lI-yc6">
-                                <rect key="frame" x="128" y="663.66666666666663" width="172" height="47"/>
+                                <rect key="frame" x="121" y="663.66666666666663" width="172" height="47"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
                                 <state key="normal" title="Spiel starten">
                                     <color key="titleColor" red="0.090930702033302446" green="1" blue="0.00042174520031923457" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1572,7 +1574,7 @@
             <objects>
                 <viewController storyboardIdentifier="WuerfelnViewController" id="TkY-eV-ZxO" customClass="WuerfelnViewController" customModule="Trinkspiel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NC7-Pf-uVY">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="HSl-kM-qp6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1587,14 +1589,14 @@
             <objects>
                 <viewController storyboardIdentifier="PiccoloGameViewController" id="GYO-Ko-9qp" customClass="PiccoloGameViewController" customModule="Trinkspiel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="GMe-lU-Hnb">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watercolour-1325656" translatesAutoresizingMaskIntoConstraints="NO" id="CbR-gk-VnL">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Fx6-Jl-URw">
-                                <rect key="frame" x="20" y="74" width="388" height="788"/>
+                                <rect key="frame" x="20" y="74" width="374" height="758"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="21"/>
                                 <state key="normal" title="Button with Instructions">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1633,7 +1635,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sjY-2i-BsS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Qi-Pu-KNW">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

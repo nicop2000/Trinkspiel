@@ -87,7 +87,7 @@ class TangeraViewController: UIViewController {
             ButtonTop.removeFromSuperview()
             ButtonBottom.removeFromSuperview()
             EndLabel.isHidden = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // Change `2.0` to the desired number of seconds.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { // Change `2.0` to the desired number of seconds.
                // Code you want to be delayed
                 self.goBack()
                 

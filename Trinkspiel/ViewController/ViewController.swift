@@ -79,8 +79,8 @@ class ViewController: UIViewController {
            self.navigationController?.pushViewController(vc, animated: true)
         break
         default:
-           let vc = storyboard?.instantiateViewController(identifier: "WuerfelnViewController") as! WuerfelnViewController
-           self.navigationController?.pushViewController(vc, animated: true)
+//           let vc = storyboard?.instantiateViewController(identifier: "WuerfelnViewController") as! WuerfelnViewController
+//           self.navigationController?.pushViewController(vc, animated: true)
         break
         }
         
@@ -115,6 +115,35 @@ class ViewController: UIViewController {
             segmentCount += 1
     
     }
+        
+        let alert = UIAlertController(title: "Achtung", message: "Alkohol ist gesundheitsschädlich. Lasst euch von niemandem zum Trinken überreden, wenn ihr es nicht selber wollt. Durch das Bestätigen dieser Meldung, bestätigt ihr, dass ihr verantwortungsvoll mit Alkohol umgeht und für alle folgenden Ereignisse selbst verantwortlich seid. Die App ist nicht Schuld an eurem Verhalten und den Konsequenzen. Kennt euer Limit!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK – Verstanden: Fortfahren", style: .default, handler: { action in
+              switch action.style{
+              case .default:
+                    print("default")
+                
+              case .cancel:
+                    print("cancel")
+              case .destructive:
+                    print("destructive")
+              @unknown default:
+                print("error")
+              }}))
+        alert.addAction(UIAlertAction(title: "Abbrechen", style: .cancel, handler: { action in
+              switch action.style{
+              case .default:
+                    print("default")
+                    
+              case .cancel:
+                    print("cadncel")
+                exit(-1)
+              case .destructive:
+                    print("destructive")
+
+              @unknown default:
+                print("error")
+              }}))
+        self.present(alert, animated: true, completion: nil)
         
         
 //startButtonFrontPage.layer.cornerRadius = 50

@@ -14,6 +14,7 @@ import UIKit
 class PiccoloViewController: UIViewController, UITextFieldDelegate {
     var playernames: [String] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +40,10 @@ class PiccoloViewController: UIViewController, UITextFieldDelegate {
         }
             let vc = storyboard?.instantiateViewController(identifier: "PiccoloGameViewController") as! PiccoloGameViewController
                 vc.players = playernames
+            
+                vc.rundenanzahl = Int(rundenanzahl.text!) ?? 30
+            
+            
             self.navigationController?.pushViewController(vc, animated: true)
         }
         
@@ -78,6 +83,7 @@ class PiccoloViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var player28Field: UITextField!
     @IBOutlet weak var player29Field: UITextField!
     @IBOutlet weak var player30Field: UITextField!
+    @IBOutlet weak var rundenanzahl: UITextField!
     
     //MARK: Declaration of field-actions
     

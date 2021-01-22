@@ -16,6 +16,8 @@ class PiccoloGameViewController: UIViewController {
     var instructions: [String] = []
     var virusInstructions: [String] = []
     var countInst = 0
+    var rundenanzahl = 0
+    var gespielt = 0
     
     @IBOutlet weak var ButtonLabelOutl: UIButton!
     
@@ -25,6 +27,7 @@ class PiccoloGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(rundenanzahl)
         validatePlayernames()
         setUpViewController()
         print("Start")
@@ -146,12 +149,22 @@ class PiccoloGameViewController: UIViewController {
     }
     
     func changeInstruction() {
+        gespielt += 1
         countInst += 1
+        
         print(instructions.count)
         print(countInst)
-        if(countInst >= instructions.count) {
+        if(countInst >= instructions.count || gespielt >= rundenanzahl) {
             print("Ende")
             ButtonLabelOutl.setTitle("ENDE", for: .normal)
+            if(countInst > instructions.count || gespielt > rundenanzahl) {
+                _ = self.navigationController?.popToRootViewController(animated: true)
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { // Change `2.0` to the desired number of seconds.
+               // Code you want to be delayed
+                _ = self.navigationController?.popToRootViewController(animated: true)
+                
+            }
         } else {
             let changedInst = instructions[countInst]
             if(changedInst == "") {
@@ -171,10 +184,12 @@ class PiccoloGameViewController: UIViewController {
     }
     
     @IBAction func ButtonLabelBack(_ sender: Any) {
-        changeInstruction()
         if(countInst >= 1) {
             countInst += -2
+            gespielt -= 2
         }
+        changeInstruction()
+        
         
     }
     

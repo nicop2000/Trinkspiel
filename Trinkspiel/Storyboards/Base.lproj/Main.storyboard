@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sjY-2i-BsS">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -466,19 +466,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="3ff-QB-bxT">
-                                <rect key="frame" x="14" y="92.666666666666686" width="386" height="710.66666666666652"/>
+                                <rect key="frame" x="13" y="92.666666666666686" width="388" height="710.66666666666652"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fyB-Z9-cyi">
-                                        <rect key="frame" x="0.0" y="0.0" width="386" height="92.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="388" height="92.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Gewinne in Folge für den Dealer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RR1-yh-l5F">
-                                                <rect key="frame" x="71.333333333333329" y="0.0" width="243.66666666666669" height="19.666666666666668"/>
+                                                <rect key="frame" x="72.333333333333329" y="0.0" width="243.66666666666669" height="19.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="bhp-av-uGs">
-                                                <rect key="frame" x="110.66666666666667" y="25.666666666666657" width="164.66666666666663" height="40"/>
+                                                <rect key="frame" x="111.66666666666667" y="25.666666666666657" width="164.66666666666663" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exn-EI-eBc">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -514,7 +514,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Der Nächste ist dran" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a76-4E-xJN">
-                                                <rect key="frame" x="110" y="71.666666666666671" width="166" height="21"/>
+                                                <rect key="frame" x="111" y="71.666666666666671" width="166" height="21"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -525,10 +525,10 @@
                                         </constraints>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="1-10" translatesAutoresizingMaskIntoConstraints="NO" id="QfS-X9-HRk">
-                                        <rect key="frame" x="45" y="128.66666666666669" width="296" height="416.00000000000006"/>
+                                        <rect key="frame" x="45" y="128.66666666666669" width="298" height="416.00000000000006"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBD-6o-8vP">
-                                        <rect key="frame" x="128" y="580.66666666666674" width="130" height="130"/>
+                                        <rect key="frame" x="129" y="580.66666666666674" width="130" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="130" id="Lke-7G-snT">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="100"/>

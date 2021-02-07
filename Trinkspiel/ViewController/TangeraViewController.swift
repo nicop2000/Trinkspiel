@@ -23,6 +23,9 @@ class TangeraViewController: UIViewController {
     @IBOutlet weak var ButtonTop: UIButton!
     @IBOutlet weak var EndLabel: UILabel!
     var round = 0
+   
+    
+   
     
     
     
@@ -86,7 +89,7 @@ class TangeraViewController: UIViewController {
             CardView.removeFromSuperview()
             ButtonTop.removeFromSuperview()
             ButtonBottom.removeFromSuperview()
-            EndLabel.isHidden = false
+            EndLabel.alpha = 1
             DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { // Change `2.0` to the desired number of seconds.
                // Code you want to be delayed
                 self.goBack()
@@ -116,7 +119,7 @@ class TangeraViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
         
-        EndLabel.isHidden = true
+        EndLabel.alpha = 0
         DescriptionTop.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         ButtonTop.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         

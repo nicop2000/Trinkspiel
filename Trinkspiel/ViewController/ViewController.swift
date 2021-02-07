@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     @IBOutlet var explainTangeraWhilePlaying: UISwitch!
     @IBOutlet weak var gameDecision: UISegmentedControl!
     
-    var games = ["Tangera", "Dealer", "Piccolo"/*, "Würfeln"*/]
+    var games = ["Tangera", "Dealer", "Piccolo", "Bier-Pong"]
     
         
             
@@ -77,12 +77,16 @@ class ViewController: UIViewController {
         case 2:
            let vc = storyboard?.instantiateViewController(identifier: "PiccoloViewController") as! PiccoloViewController
            self.navigationController?.pushViewController(vc, animated: true)
+            vc.game = "Piccolo"
         break
         default:
-//           let vc = storyboard?.instantiateViewController(identifier: "WuerfelnViewController") as! WuerfelnViewController
-//           self.navigationController?.pushViewController(vc, animated: true)
+           let vc = storyboard?.instantiateViewController(identifier: "PiccoloViewController") as! PiccoloViewController
+            vc.game = "Beerpong"
+           self.navigationController?.pushViewController(vc, animated: true)
+        
         break
         }
+        
         
         
         
@@ -185,6 +189,7 @@ extension ViewController: UITableViewDataSource {
         
         return cell
     }
+
     
     
     func feedback() {

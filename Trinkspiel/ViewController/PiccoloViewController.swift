@@ -13,6 +13,7 @@ import UIKit
 
 class PiccoloViewController: UIViewController, UITextFieldDelegate {
     var playernames: [String] = []
+    var game = ""
     
     
     override func viewDidLoad() {
@@ -23,7 +24,13 @@ class PiccoloViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
-        hideAllNameFields()
+       
+            hideAllNameFields()
+        if(game == "Beerpong") {
+            rundenanzahl.alpha = 0
+        }
+        
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -31,7 +38,9 @@ class PiccoloViewController: UIViewController, UITextFieldDelegate {
             return true
         }
     @IBAction func startPiccoloButton() {
+        
         fillArrayPlayernames()
+        if (game == "Piccolo") {
         if(player1Field.text != "" && player2Field.text != "" && player3Field.text != "") {
             
         
@@ -45,6 +54,19 @@ class PiccoloViewController: UIViewController, UITextFieldDelegate {
             
             
             self.navigationController?.pushViewController(vc, animated: true)
+        }
+        }
+        if (game == "Beerpong") {
+            if (playernames.count % 2 != 0) {
+                print("Ungerade")
+            } else {
+                while (playernames[playernames.count-1] == "") {
+                    playernames.remove(at: playernames.count-1)
+                }
+                let vc = storyboard?.instantiateViewController(identifier: "BeerpongViewController") as! BeerpongViewController
+                vc.players = playernames;
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
         
    
@@ -90,261 +112,261 @@ class PiccoloViewController: UIViewController, UITextFieldDelegate {
     @IBAction func p1Action(_ sender: Any) {
        let apF = player2Field!
         if(player1Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p2Action(_ sender: Any) {
        let apF = player3Field!
         if(player2Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p3Action(_ sender: Any) {
        let apF = player4Field!
         if(player3Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p4Action(_ sender: Any) {
        let apF = player5Field!
         if(player4Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p5Action(_ sender: Any) {
        let apF = player6Field!
         if(player5Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p6Action(_ sender: Any) {
        let apF = player7Field!
         if(player6Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p7Action(_ sender: Any) {
        let apF = player8Field!
         if(player7Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p8Action(_ sender: Any) {
        let apF = player9Field!
         if(player8Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p9Action(_ sender: Any) {
        let apF = player10Field!
         if(player9Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p10Action(_ sender: Any) {
        let apF = player11Field!
         if(player10Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p11Action(_ sender: Any) {
        let apF = player12Field!
         if(player11Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p12Action(_ sender: Any) {
        let apF = player13Field!
         if(player12Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p13Action(_ sender: Any) {
        let apF = player14Field!
         if(player13Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p14Action(_ sender: Any) {
        let apF = player15Field!
         if(player14Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p15Action(_ sender: Any) {
        let apF = player16Field!
         if(player15Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p16Action(_ sender: Any) {
        let apF = player17Field!
         if(player16Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p17Action(_ sender: Any) {
        let apF = player18Field!
         if(player17Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p18ction(_ sender: Any) {
        let apF = player19Field!
         if(player18Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p19Action(_ sender: Any) {
        let apF = player20Field!
         if(player19Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p20Action(_ sender: Any) {
        let apF = player21Field!
         if(player20Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p21Action(_ sender: Any) {
        let apF = player22Field!
         if(player21Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p22Action(_ sender: Any) {
        let apF = player23Field!
         if(player22Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p23Action(_ sender: Any) {
        let apF = player24Field!
         if(player23Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p24Action(_ sender: Any) {
        let apF = player25Field!
         if(player24Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p25Action(_ sender: Any) {
        let apF = player26Field!
         if(player25Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p26Action(_ sender: Any) {
        let apF = player27Field!
         if(player26Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p27Action(_ sender: Any) {
        let apF = player28Field!
         if(player27Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p28Action(_ sender: Any) {
        let apF = player29Field!
         if(player28Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
     @IBAction func p29Action(_ sender: Any) {
        let apF = player30Field!
         if(player29Field.text != ""){
-            apF.isHidden = false
+            apF.alpha = 1
         } else {
-            apF.isHidden = true
+            apF.alpha = 0
             apF.text = ""
         }
     }
@@ -354,35 +376,35 @@ class PiccoloViewController: UIViewController, UITextFieldDelegate {
 //MARK: preparing screen
     func hideAllNameFields() {
 
-        player2Field.isHidden = true
-        player3Field.isHidden = true
-        player4Field.isHidden = true
-        player5Field.isHidden = true
-        player6Field.isHidden = true
-        player7Field.isHidden = true
-        player8Field.isHidden = true
-        player9Field.isHidden = true
-        player10Field.isHidden = true
-        player11Field.isHidden = true
-        player12Field.isHidden = true
-        player13Field.isHidden = true
-        player14Field.isHidden = true
-        player15Field.isHidden = true
-        player16Field.isHidden = true
-        player17Field.isHidden = true
-        player18Field.isHidden = true
-        player19Field.isHidden = true
-        player20Field.isHidden = true
-        player21Field.isHidden = true
-        player22Field.isHidden = true
-        player23Field.isHidden = true
-        player24Field.isHidden = true
-        player25Field.isHidden = true
-        player26Field.isHidden = true
-        player27Field.isHidden = true
-        player28Field.isHidden = true
-        player29Field.isHidden = true
-        player30Field.isHidden = true
+        player2Field.alpha = 0
+        player3Field.alpha = 0
+        player4Field.alpha = 0
+        player5Field.alpha = 0
+        player6Field.alpha = 0
+        player7Field.alpha = 0
+        player8Field.alpha = 0
+        player9Field.alpha = 0
+        player10Field.alpha = 0
+        player11Field.alpha = 0
+        player12Field.alpha = 0
+        player13Field.alpha = 0
+        player14Field.alpha = 0
+        player15Field.alpha = 0
+        player16Field.alpha = 0
+        player17Field.alpha = 0
+        player18Field.alpha = 0
+        player19Field.alpha = 0
+        player20Field.alpha = 0
+        player21Field.alpha = 0
+        player22Field.alpha = 0
+        player23Field.alpha = 0
+        player24Field.alpha = 0
+        player25Field.alpha = 0
+        player26Field.alpha = 0
+        player27Field.alpha = 0
+        player28Field.alpha = 0
+        player29Field.alpha = 0
+        player30Field.alpha = 0
         player1Field.delegate = self
         player2Field.delegate = self
         player3Field.delegate = self

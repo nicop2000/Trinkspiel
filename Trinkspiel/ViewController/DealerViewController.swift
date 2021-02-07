@@ -30,8 +30,8 @@ class DealerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NewRound(self)
-        labelNextOne.isHidden = true
-        NextButton.isHidden = true
+        labelNextOne.alpha = 0
+        NextButton.alpha = 0
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
@@ -84,22 +84,22 @@ class DealerViewController: UIViewController {
             DealerCount += 1
             NewRound(self)
         } else if (answer == 2) {
-            labelNextOne.isHidden = true
-            NextButton.isHidden = true
+            labelNextOne.alpha = 0
+            NextButton.alpha = 0
             DealerCount = 0
             NewRound(self)
             
         } else if (answer == 0 && DealerCount < 3)
             {
             DealerCount = 0
-                labelNextOne.isHidden = true
+                labelNextOne.alpha = 0
             NewRound(self)
             
         }
         DealerValue.text = "\(DealerCount)"
         if (DealerCount == 3) {
-            labelNextOne.isHidden = false
-            NextButton.isHidden = false
+            labelNextOne.alpha = 1
+            NextButton.alpha = 1
         }
         
         

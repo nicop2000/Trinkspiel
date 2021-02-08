@@ -25,6 +25,7 @@ class Utilities {
         textfield.borderStyle = .none
         textfield.layer.addSublayer(bottomLine)
         textfield.autocorrectionType = UITextAutocorrectionType.no
+        textfield.textColor = .white
         
     }
     

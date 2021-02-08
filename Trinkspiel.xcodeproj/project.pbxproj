@@ -16,6 +16,7 @@
 		0A24405925CF5624004FD1C7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A24405825CF5624004FD1C7 /* SignUpViewController.swift */; };
 		0A24405C25CFF5F2004FD1C7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A24405B25CFF5F2004FD1C7 /* Utilities.swift */; };
 		0A24405F25D02445004FD1C7 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A24405E25D02445004FD1C7 /* Validator.swift */; };
+		0A2440AE25D14BD6004FD1C7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2440AD25D14BD5004FD1C7 /* SettingsViewController.swift */; };
 		0A37F7F725A79AC00074E74B /* DealerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A37F7F625A79AC00074E74B /* DealerViewController.swift */; };
 		0A37F7FA25A79CC20074E74B /* PiccoloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A37F7F925A79CC20074E74B /* PiccoloViewController.swift */; };
 		0A37F7FD25A79CD60074E74B /* BeerpongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A37F7FC25A79CD60074E74B /* BeerpongViewController.swift */; };
@@ -26,6 +27,8 @@
 		0A85701925A12E4B00F2256C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A85701825A12E4B00F2256C /* Assets.xcassets */; };
 		0A85701C25A12E4B00F2256C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A85701A25A12E4B00F2256C /* LaunchScreen.storyboard */; };
 		0AD9F3CC25B20A6100E09EAC /* piccolo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9F3CB25B20A6100E09EAC /* piccolo.txt */; };
+		0AE267D325D1905B001EB333 /* PersonalScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE267D225D1905B001EB333 /* PersonalScreenViewController.swift */; };
+		0AE2680125D1E5B2001EB333 /* ShotCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2680025D1E5B2001EB333 /* ShotCounterViewController.swift */; };
 		BA277B770649D02139F90440 /* Pods_Trinkspiel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3AD7FA7A0A088EE1EB5E09E /* Pods_Trinkspiel.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,7 @@
 		0A24405825CF5624004FD1C7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0A24405B25CFF5F2004FD1C7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		0A24405E25D02445004FD1C7 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		0A2440AD25D14BD5004FD1C7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0A37F7F625A79AC00074E74B /* DealerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerViewController.swift; sourceTree = "<group>"; };
 		0A37F7F925A79CC20074E74B /* PiccoloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiccoloViewController.swift; sourceTree = "<group>"; };
 		0A37F7FC25A79CD60074E74B /* BeerpongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerpongViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		0A85701B25A12E4B00F2256C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A85701D25A12E4B00F2256C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AD9F3CB25B20A6100E09EAC /* piccolo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = piccolo.txt; sourceTree = "<group>"; };
+		0AE267D225D1905B001EB333 /* PersonalScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalScreenViewController.swift; sourceTree = "<group>"; };
+		0AE2680025D1E5B2001EB333 /* ShotCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotCounterViewController.swift; sourceTree = "<group>"; };
 		1A6365AF0A3D349EC7A24637 /* Pods-Trinkspiel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trinkspiel.debug.xcconfig"; path = "Target Support Files/Pods-Trinkspiel/Pods-Trinkspiel.debug.xcconfig"; sourceTree = "<group>"; };
 		94DC658018517D0AC0B63017 /* Pods-Trinkspiel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trinkspiel.release.xcconfig"; path = "Target Support Files/Pods-Trinkspiel/Pods-Trinkspiel.release.xcconfig"; sourceTree = "<group>"; };
 		C3AD7FA7A0A088EE1EB5E09E /* Pods_Trinkspiel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trinkspiel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +105,9 @@
 				0A37F7FC25A79CD60074E74B /* BeerpongViewController.swift */,
 				0A24405525CF560C004FD1C7 /* LoginViewController.swift */,
 				0A24405825CF5624004FD1C7 /* SignUpViewController.swift */,
+				0A2440AD25D14BD5004FD1C7 /* SettingsViewController.swift */,
+				0AE267D225D1905B001EB333 /* PersonalScreenViewController.swift */,
+				0AE2680025D1E5B2001EB333 /* ShotCounterViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -270,18 +279,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE267D325D1905B001EB333 /* PersonalScreenViewController.swift in Sources */,
 				0A05F89325AB75AE000B8D4D /* PiccoloGameViewController.swift in Sources */,
 				0A85701425A12E4600F2256C /* ViewController.swift in Sources */,
 				0A85701025A12E4600F2256C /* AppDelegate.swift in Sources */,
 				0A0115D525A637F800DE8494 /* GamesDescription.swift in Sources */,
 				0A24405F25D02445004FD1C7 /* Validator.swift in Sources */,
 				0A37F7F725A79AC00074E74B /* DealerViewController.swift in Sources */,
+				0AE2680125D1E5B2001EB333 /* ShotCounterViewController.swift in Sources */,
 				0A37F7FD25A79CD60074E74B /* BeerpongViewController.swift in Sources */,
 				0A24405925CF5624004FD1C7 /* SignUpViewController.swift in Sources */,
 				0A24405C25CFF5F2004FD1C7 /* Utilities.swift in Sources */,
 				0A0115D925A647D500DE8494 /* DescriptionViewController.swift in Sources */,
 				0A85701225A12E4600F2256C /* SceneDelegate.swift in Sources */,
 				0A37F7FA25A79CC20074E74B /* PiccoloViewController.swift in Sources */,
+				0A2440AE25D14BD6004FD1C7 /* SettingsViewController.swift in Sources */,
 				0A0115DD25A7095D00DE8494 /* TangeraViewController.swift in Sources */,
 				0A24405625CF560C004FD1C7 /* LoginViewController.swift in Sources */,
 			);

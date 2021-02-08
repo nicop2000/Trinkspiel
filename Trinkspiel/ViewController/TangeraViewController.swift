@@ -11,8 +11,13 @@
 
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class TangeraViewController: UIViewController {
+    var ref = Database.database(url:"https://trinkspiel-5be43-default-rtdb.europe-west1.firebasedatabase.app/").reference()
+    var scores: [String] = []
+    var loggedIn = false
     var help = false
     var cardsSkat: [String] = []
     var whichCard = ""
@@ -23,6 +28,7 @@ class TangeraViewController: UIViewController {
     @IBOutlet weak var ButtonTop: UIButton!
     @IBOutlet weak var EndLabel: UILabel!
     var round = 0
+    
    
     
    
@@ -90,7 +96,17 @@ class TangeraViewController: UIViewController {
             ButtonTop.removeFromSuperview()
             ButtonBottom.removeFromSuperview()
             EndLabel.alpha = 1
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { // Change `2.0` to the desired number of seconds.
+            if loggedIn {
+            let user = Auth.auth().currentUser!
+            self.ref.child("users").child(user.uid).observeSingleEvent(of: .value, with: {(snapshot) in
+            let value = snapshot.value as! NSDictionary
+                for (key, value) in value {
+                    self.scores.append("\(value)")
+                }
+                self.ref.child("users").child(user.uid).setValue(["tangeraRoundsPlayed": Int(self.scores[3])! + 1,"dealerRoundsPlayed": Int(self.scores[0]),"piccoloRoundsPlayed": Int(self.scores[2]),"drunkenShots": Int(self.scores[1])])
+            })
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // Change `2.0` to the desired number of seconds.
                // Code you want to be delayed
                 self.goBack()
                 

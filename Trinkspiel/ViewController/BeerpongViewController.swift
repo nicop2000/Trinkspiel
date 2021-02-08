@@ -10,6 +10,7 @@
 import UIKit
 
 class BeerpongViewController: UIViewController {
+    var loggedIn = false
     var players: [String] = []
     var counter = 0
     var teamNumber = 1;

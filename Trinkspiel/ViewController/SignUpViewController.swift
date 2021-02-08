@@ -13,9 +13,12 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
+    var ref = Database.database(url:"https://trinkspiel-5be43-default-rtdb.europe-west1.firebasedatabase.app/").reference()
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var emailSignUp: UITextField!
@@ -25,11 +28,17 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorMsg: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
         
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         
         // Do any additional setup after loading the view.
@@ -39,6 +48,28 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         // Do any additional setup after loading the view.
     }
+    
+    var keyboardShown = false
+    
+    @objc func keyboardAppear() {
+        if !keyboardShown {
+            self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height + 250)
+            keyboardShown = true
+        }
+        
+    }
+    
+    @objc func keyboardDisappear() {
+        if keyboardShown {
+        self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height - 250)
+        keyboardShown = false
+        }
+        
+    }
+    
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
             self.view.layoutIfNeeded()
@@ -75,6 +106,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         self.emailSignUp.delegate = self
         self.password.delegate = self
         self.passwordRepeat.delegate = self
+        
+        firstName.alpha = 1
+        lastName.alpha = 1
+        emailSignUp.alpha = 1
+        password.alpha = 1
+        passwordRepeat.alpha = 1
+        signUpButton.alpha = 1
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -114,7 +153,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             
             //Benutzer erstellen
             
-            Auth.auth().createUser(withEmail: cleanEmailSignUp, password: cleanPassword) { (result, err) in
+            Auth.auth().createUser(withEmail: cleanEmailSignUp, password: cleanPassword) { [self] (result, err) in
                 if err != nil {
                     
                     self.showError("Benutzer konnte nicht erstellt werden. " + err!.localizedDescription)
@@ -124,7 +163,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                     //Nutzerdaten speichern
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["Vorname":cleanFirstName, "Nachname":cleanLastName, "uid": result!.user.uid]) { (error) in
+                    db.collection("users").document("\(result!.user.uid)").setData(["Vorname":cleanFirstName, "Nachname":cleanLastName, "uid": result!.user.uid]){ (error) in
                         if error != nil {
                             self.showError("Account erfolgreich erstellt, jedoch konnten die Nutzerdaten nicht gespeichert werden" + error!.localizedDescription)
                             
@@ -132,6 +171,34 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         
                         
                     }
+                    
+                    self.ref.child("users").child(result!.user.uid).setValue(["tangeraRoundsPlayed": 0, "dealerRoundsPlayed": 0, "piccoloRoundsPlayed": 0, "drunkenShots": 0])
+                    
+                    errorMsg.textColor = .green
+                    errorMsg.text = "Registrierung erfolgreich. Du wirst weitergeleitet"
+                    errorMsg.alpha = 1
+                    firstName.alpha = 0
+                    lastName.alpha = 0
+                    emailSignUp.alpha = 0
+                    password.alpha = 0
+                    passwordRepeat.alpha = 0
+                    signUpButton.alpha = 0
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [self] in
+                        let vc = storyboard?.instantiateViewController(identifier: "HomeViewController") as! ViewController
+                        
+                        vc.loggedIn = true
+                        vc.firstStart = false
+                        
+                        self.navigationController?.pushViewController(vc, animated: true)
+                        guard let navigationController = self.navigationController else { return }
+                        var navigationArray = navigationController.viewControllers // To get all UIViewController stack as Array
+                        print(navigationArray)
+                        let temp = navigationArray.last
+                        navigationArray.removeAll()
+                        navigationArray.append(temp!)
+                        // To remove previous UIViewController
+                        self.navigationController?.viewControllers = navigationArray
+                }
                 }
                 
             }

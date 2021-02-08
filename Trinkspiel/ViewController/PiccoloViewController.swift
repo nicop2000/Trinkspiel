@@ -10,8 +10,12 @@
 
 
 import UIKit
+import FirebaseAuth
+import Firebase
+
 
 class PiccoloViewController: UIViewController, UITextFieldDelegate {
+    var loggedIn = false
     var playernames: [String] = []
     var game = ""
     
@@ -30,6 +34,52 @@ class PiccoloViewController: UIViewController, UITextFieldDelegate {
             rundenanzahl.alpha = 0
         }
         
+        if loggedIn {
+            loginRoutine()
+            
+        }
+        
+    }
+    
+    func loginRoutine() {
+        
+        
+            let user = Auth.auth().currentUser
+                
+        
+//                self.ref.child("users").child(user.uid).setValue(["roundsPlayed": 12])
+            
+        let db = Firestore.firestore()
+
+        let docRef = db.collection("users").document("\(user!.uid)")
+        docRef.getDocument { (document, error) in
+            
+            if let document = document, document.exists {
+               
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                
+                var arrayNeeded = dataDescription.components(separatedBy: ",")
+                var temp = ""
+                for i in 0...arrayNeeded.count - 1 {
+                    if arrayNeeded[i].contains("Vorname") {
+                        temp = arrayNeeded[i]
+                    }
+                    
+                }
+                temp = temp.replacingOccurrences(of: "\"Vorname\": ", with: "")
+                temp = temp.replacingOccurrences(of: "[", with: "")
+                var insert = temp.replacingOccurrences(of: "]", with: "")
+                print(insert)
+                self.player1Field.text = insert
+               
+            
+            }
+        }
+        
+
+        
+        
+        player2Field.alpha = 1;
         
     }
     
@@ -49,6 +99,7 @@ class PiccoloViewController: UIViewController, UITextFieldDelegate {
         }
             let vc = storyboard?.instantiateViewController(identifier: "PiccoloGameViewController") as! PiccoloGameViewController
                 vc.players = playernames
+            vc.loggedIn = loggedIn
             
                 vc.rundenanzahl = Int(rundenanzahl.text!) ?? 30
             
@@ -65,6 +116,7 @@ class PiccoloViewController: UIViewController, UITextFieldDelegate {
                 }
                 let vc = storyboard?.instantiateViewController(identifier: "BeerpongViewController") as! BeerpongViewController
                 vc.players = playernames;
+                vc.loggedIn = loggedIn
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }

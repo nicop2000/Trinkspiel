@@ -11,14 +11,19 @@
 
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class DealerViewController: UIViewController {
-    
+    var loggedIn = false
+    var ref = Database.database(url:"https://trinkspiel-5be43-default-rtdb.europe-west1.firebasedatabase.app/").reference()
+    var scores: [String] = []
     
     @IBOutlet weak var ActualCard: UIImageView!
     var ramColor = 0
     var ramValue = 0
     var DealerCount = 0
+    
     
     @IBOutlet weak var DealerValue: UILabel!
     
@@ -36,6 +41,16 @@ class DealerViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
+        if loggedIn {
+        let user = Auth.auth().currentUser!
+        self.ref.child("users").child(user.uid).observeSingleEvent(of: .value, with: {(snapshot) in
+        let value = snapshot.value as! NSDictionary
+            for (key, value) in value {
+                self.scores.append("\(value)")
+            }
+            self.ref.child("users").child(user.uid).setValue(["tangeraRoundsPlayed": Int(self.scores[3]),"dealerRoundsPlayed": Int(self.scores[0])! + 1,"piccoloRoundsPlayed": Int(self.scores[2]),"drunkenShots": Int(self.scores[1])])
+        })
+        }
         
     }
     

@@ -10,11 +10,17 @@
 
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class PiccoloGameViewController: UIViewController {
+    var ref = Database.database(url:"https://trinkspiel-5be43-default-rtdb.europe-west1.firebasedatabase.app/").reference()
+    var scores: [String] = []
+    var loggedIn = false
     var players: [String] = []
     var instructions: [String] = []
     var virusInstructions: [String] = []
+    
     var countInst = 0
     var rundenanzahl = 0
     var gespielt = 0
@@ -156,6 +162,26 @@ class PiccoloGameViewController: UIViewController {
         print(countInst)
         if(countInst >= instructions.count || gespielt >= rundenanzahl) {
             print("Ende")
+            if loggedIn {
+            let user = Auth.auth().currentUser!
+            self.ref.child("users").child(user.uid).observeSingleEvent(of: .value, with: {(snapshot) in
+            let value = snapshot.value as! NSDictionary
+                for (key, value) in value {
+                    self.scores.append("\(value)")
+                }
+                print(Int(self.scores[2])! + 1)
+                self.ref.child("users").child(user.uid).setValue(["tangeraRoundsPlayed": Int(self.scores[3]),"dealerRoundsPlayed": Int(self.scores[0]),"piccoloRoundsPlayed": Int(self.scores[2])! + 1,"drunkenShots": Int(self.scores[1])])
+            })
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
             ButtonLabelOutl.setTitle("ENDE", for: .normal)
             if(countInst > instructions.count || gespielt > rundenanzahl) {
                 _ = self.navigationController?.popToRootViewController(animated: true)
